@@ -39,7 +39,10 @@ init([]) ->
 		    start=>{host_server,start_link,[]}},
 
 		   #{id=>phoscon_server,
-		    start=>{phoscon_server,start_link,[]}}
+		    start=>{phoscon_server,start_link,[]}},
+
+		   #{id=>test_phoscon_server,
+		    start=>{test_phoscon_server,start_link,[]}}
 		 ],
     {ok, {SupFlags, ChildSpecs}}.
 

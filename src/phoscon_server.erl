@@ -482,8 +482,8 @@ format_status(_Opt, Status) ->
 %%%===================================================================
 %%% Internal functions
 %%%===================================================================
--define(NumLoops,20).
--define(WaitTime,1000).
+-define(NumLoops,5).
+-define(WaitTime,2000).
 wait_for_host_server()->
     wait_for_host_server(?NumLoops,?WaitTime,false).
 

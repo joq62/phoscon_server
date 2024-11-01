@@ -71,6 +71,11 @@ eunit:
 	 -pa _build/default/lib/rd/ebin\
 	 -pa _build/default/lib/common/ebin\
 	 -pa _build/default/lib/host_server/ebin\
+	 -pa _build/default/lib/gun/ebin\
+	 -pa _build/default/lib/cowboy/ebin\
+	 -pa _build/default/lib/cowlib/ebin\
+	 -pa _build/default/lib/jsx/ebin\
+	 -pa _build/default/lib/ranch/ebin\
 	 -pa _build/default/lib/$(appl)/ebin\
 	 -sname test_appl\
 	 -run $(m) start\

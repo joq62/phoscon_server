@@ -18,7 +18,7 @@ all:
 	rm -rf _build;
 	#rm -rf common_include;
 	rm -rf rebar.lock;
-	rm -rf rebar.config;
+	#rm -rf rebar.config;
 	git status
 	echo Ok there you go!
 	#INFO: no_ebin_commit ENDED SUCCESSFUL

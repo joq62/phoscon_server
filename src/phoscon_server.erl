@@ -413,7 +413,7 @@ handle_info({gun_response,_,_,_,_,_}, State) ->
 
 handle_info(timeout, State) ->
 
-    initial_trade_resources(),
+  %  initial_trade_resources(),
     ok=wait_for_host_server(),
     
     {ConbeeAddr,ConbeePort,ConbeeKey}=lib_phoscon:get_conbee_info(),
@@ -492,11 +492,11 @@ wait_for_host_server(_NumLoops,_WaitTime,ok)->
 wait_for_host_server(0,_,Acc) ->
     Acc;
 wait_for_host_server(NumLoops,WaitTime,false)->
-    io:format(" get_local_resource_tuples  ~p~n",[{rd_store: get_local_resource_tuples(),?MODULE,?LINE}]),
-    io:format("get_target_resource_types  ~p~n",[{rd_store:get_target_resource_types(),?MODULE,?LINE}]),
-    io:format("get_all_resources  ~p~n",[{rd_store:get_all_resources(),?MODULE,?LINE}]),
-    io:format("get_resource_types() ~p~n",[{rd_store:get_resource_types(),?MODULE,?LINE}]),
-    io:format("rd:fetch_resources(host_server) ~p~n",[{rd:fetch_resources(host_server),?MODULE,?LINE}]),
+%    io:format(" get_local_resource_tuples  ~p~n",[{rd_store: get_local_resource_tuples(),?MODULE,?LINE}]),
+%    io:format("get_target_resource_types  ~p~n",[{rd_store:get_target_resource_types(),?MODULE,?LINE}]),
+%    io:format("get_all_resources  ~p~n",[{rd_store:get_all_resources(),?MODULE,?LINE}]),
+%    io:format("get_resource_types() ~p~n",[{rd_store:get_resource_types(),?MODULE,?LINE}]),
+%    io:format("rd:fetch_resources(host_server) ~p~n",[{rd:fetch_resources(host_server),?MODULE,?LINE}]),
     case rd:fetch_resources(host_server) of
 	[]->
 	    timer:sleep(WaitTime),
